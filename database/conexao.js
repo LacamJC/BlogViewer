@@ -15,3 +15,4 @@ const sequelize = new Sequelize('railway', 'root', 'd5D22ceECB1gBfhbaB1g3eFbdGh4
 })
 
 module.exports = sequelize
+

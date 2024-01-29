@@ -1,0 +1,23 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.titulo
+{
+    text-align: center;
+}
+
+.form
+{
+    max-width: 800px;
+    /* background-color: blue; */
+    padding: 20px;
+    margin: auto;
+}
+
+.form textarea
+{
+    min-height: 200px !important;
+}

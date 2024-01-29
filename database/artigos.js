@@ -21,6 +21,6 @@ const bd_artigos = database.define('bd_artigos', {
     },
 })
 
-bd_artigos.sync({force:true});
+// bd_artigos.sync({force:true});
 
 module.exports = bd_artigos
