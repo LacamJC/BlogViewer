@@ -17,9 +17,7 @@ aplicacao.use(express.static(__dirname +'/public'))
 
 aplicacao.set('view engine', 'ejs');
 
-aplicacao.listen(3000, function(req,res){
-    console.log("### Ouvindo na porta 3000 ###")
-})
+
 
 aplicacao.post('/postar', function(req,res){
     console.log("### Enviando artigo para o banco de dados")
@@ -62,4 +60,10 @@ aplicacao.get('/blogViews', function(req,res){
 
         res.render('../views/blogViews.ejs', {id : all_id, autor : all_autor, titulo : all_titulo, texto : all_texto})
     })
+})
+
+const port = process.env.PORT || 3000;
+
+aplicacao.listen(port, "0.0.0.0", function(){
+    console.log("### Aplicacao aberta ###")
 })
