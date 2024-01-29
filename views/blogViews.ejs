@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veja todos os nosso artigos !</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class=" my-2 text-center">Leia os artigos publicados pela comunidade ! </h1>
+    <div class="cadastrados">
+        <%for(let i=0; i < id.length; i++)
+        {%>
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"><%=titulo[i]%></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Feito por: <%=autor[i]%></h6>
+                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                  <!-- <a href="#" class="card-link">Card link</a> -->
+                  <!-- <a href="#" class="card-link">Another link</a> -->
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#artigo<%=id[i]%>">
+                    Ler artigo
+                  </button>
+                </div>
+            </div>
+        <%}%>
+    </div>
+<!--  -->
+<!--  -->
+<!--  -->
+
+    <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <%for(let i=0; i < id.length; i++){%>
+  <div class="modal fade" id="artigo<%=id[i]%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"><%=titulo[i]%></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%=texto[i]%>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn ">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <%}%>
+
+<!--  -->
+<!--  -->
+<!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
