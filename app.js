@@ -36,7 +36,7 @@ aplicacao.post('/postar', function(req,res){
         texto: artigo.texto
     }).then(function(){
         console.log("### Artigo cadastrado no banco de dados");
-        res.render('/')
+        res.render('../views/index.ejs')
     }).catch(function(error){
         console.log("Erro ao cadastrar artigo no banco" + error);
         res.status(500).send('Erro ao cadastrar artigo no banco de dados')
