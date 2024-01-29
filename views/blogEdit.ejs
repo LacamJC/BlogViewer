@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1 class="titulo">Crie seu artigo gratuitamente !</h1>
-    <form action="/postar" method="post" class="form">
+    <form action="/postar" method="post" class="form" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="autorInput" class="form-label">Autor</label>
             <input type="text" name="autor" id="autorInput" class="form-control" required>
@@ -23,6 +23,10 @@
         <div class="form-floating mb-3">
             <textarea name="artigo" id="textareaInput"  class="form-control" placeholder="Escreva seu artigo" required></textarea>
             <label for="textareaInput">Escreva seu artigo </label>
+        </div>
+
+        <div class="mb-3">
+          <input type="file" name="imagem" id="">
         </div>
 
 

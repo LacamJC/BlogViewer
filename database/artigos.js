@@ -19,8 +19,11 @@ const bd_artigos = database.define('bd_artigos', {
     texto: {
         type : Sequelize.TEXT
     },
+    imagem: {
+        type: Sequelize.STRING
+    }
 })
 
-// bd_artigos.sync({force:true});
+bd_artigos.sync({force:true});
 
 module.exports = bd_artigos
