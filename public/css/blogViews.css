@@ -23,7 +23,8 @@
     background-color: white;
     color: black;
     border: 1px solid black !important; 
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-left: 10px;
     transition: all 0.2s ease !important;
 }
 
@@ -40,3 +41,11 @@
     height: 50px;
     border-radius: 50%;
 }
+
+.aside
+{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+

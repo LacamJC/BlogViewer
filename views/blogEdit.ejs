@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Escreva Seu artigo !</title>
+    <title>Escreva sua postagem </title>
     <link rel="stylesheet" href="css/blogEdit.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class="titulo">Crie seu artigo gratuitamente !</h1>
+    <h1 class="titulo">Crie sua postagem</h1>
     <form action="/postar" method="post" class="form" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="autorInput" class="form-label">Autor</label>
@@ -16,13 +16,14 @@
         </div>
 
         <div class="mb-3">
-            <label for="tituloInput" class="form-label">Título do artigo</label>
+            <label for="tituloInput" class="form-label">Título do postagem</label>
             <input type="text" name="titulo" id="tituloInput" class="form-control" required>
         </div>
 
         <div class="form-floating mb-3">
-            <textarea name="artigo" id="textareaInput"  class="form-control" placeholder="Escreva seu artigo" required></textarea>
-            <label for="textareaInput">Escreva seu artigo </label>
+            <!-- <textarea name="artigo" id="textareaInput"  class="form-control" placeholder="Escreva sua postagem" required></textarea> -->
+            <input type="text" name="artigo" id="textareaInput" class="form-control" placeholder="Escreva sua postagem" maxlength="50">
+            <label for="textareaInput">Escreva sua postagem </label>
         </div>
 
         <div class="mb-3">
@@ -30,7 +31,7 @@
         </div>
 
 
-        <input type="submit" value="Enviar" class="btn btn-primary">
+        <input type="submit" value="Postar" class="btn btn-primary">
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
